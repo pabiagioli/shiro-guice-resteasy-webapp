@@ -14,13 +14,18 @@ import org.jboss.resteasy.spi.Registry;
 import org.jboss.resteasy.spi.ResourceFactory;
 import org.jboss.resteasy.spi.ResteasyProviderFactory;
 import org.jboss.resteasy.util.GetRestful;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.inject.Binding;
 import com.google.inject.Injector;
 
 @Singleton
 public class GuiceRestEasyFilterDispatcher extends FilterDispatcher {
-    @Inject
+    
+	private static final Logger log = LoggerFactory.getLogger(GuiceRestEasyFilterDispatcher.class);
+	
+	@Inject
     Injector injector;
 
     @Override
@@ -36,10 +41,12 @@ public class GuiceRestEasyFilterDispatcher extends FilterDispatcher {
                 Class<?> beanClass = (Class<?>) type;
                 if (GetRestful.isRootResource(beanClass)) {
                     ResourceFactory resourceFactory = new GuiceResourceFactory(binding.getProvider(), beanClass);
+                    log.info("registering factory for {}", beanClass.getName());
                     registry.addResourceFactory(resourceFactory);
                 }
 
                 if (beanClass.isAnnotationPresent(Provider.class)) {
+                	log.info("registering provider instance for {}", beanClass.getName());
                     providerFactory.registerProviderInstance(binding.getProvider().get());
                 }
             }

@@ -9,9 +9,11 @@ package com.pampanet.sample.servlet.config;
 public class GenericBootstrapConstants {
 
 	/**
-	 * "com.sun.jersey.config.property.packages", packages separated by commas
+	 * packages where the RestEasy Resources are, separated by commas
 	 */
-	public static final String JERSEY_PROPERTY_PACKAGES="com.pampanet.sample.rest";
+	public static final String REST_EASY_REST_PACKAGES="com.pampanet.sample.rest";
+	
+	public static final String REST_EASY_REST_PACKAGES_SUFFIX=".rest";
 	
 	/**
 	 * main properties file that gets loaded at first
