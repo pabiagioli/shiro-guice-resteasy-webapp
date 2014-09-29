@@ -9,10 +9,10 @@
   <url>http://github.com/pabiagioli/shiro-guice-resteasy-webapp</url>
   <description>Maven Archetype for building Secure RESTful Web Services Archetype with Apache Shiro 1.2.3, RestEasy 3 and Google Guice 3.0</description>
   <scm>
-    <connection>scm:git:git@github.com:pabiagioli/secure-rest-webapp-archetype.git</connection>
-    <developerConnection>scm:git:git@github.com:pabiagioli/secure-rest-webapp-archetype.git</developerConnection>
-    <url>scm:git:git@github.com:pabiagioli/secure-rest-webapp-archetype.git</url>
-    <tag>jersey-guice-webapp-archetype-0.1.4</tag>
+    <connection>scm:git:git@github.com:pabiagioli/shiro-guice-resteasy-webapp.git</connection>
+    <developerConnection>scm:git:git@github.com:pabiagioli/shiro-guice-resteasy-webapp.git</developerConnection>
+    <url>scm:git:git@github.com:pabiagioli/shiro-guice-resteasy-webapp.git</url>
+    <tag>shiro-guice-resteasy-webapp-0.0.1</tag>
   </scm>
   <developers>
     <developer>
