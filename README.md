@@ -33,13 +33,13 @@ After Deploy on Application Server
 Run with Jetty
 --------------
 - You can run the application with Jetty via Maven doing <code>mvn jetty:run</code>
-- The application gets deployed by default in http://localhost:8080
+- The application gets deployed by default in <a href="http://localhost:8080">http://localhost:8080</a>
 
 Creating a Local Maven Archetype
 --------------------------------
 - Generate an archetype: <code>mvn archetype:create-from-project</code>
 - Go to <code>target/generated-sources/archetype</code> and run <code>mvn install</code>
-- Create a fresh project from Archetype <code> mvn archetype:generate -DarchetypeCatalog=local </code> using <code>com.pampanet:secure-rest-webapp-archetype</code>
+- Create a fresh project from Archetype <code> mvn archetype:generate -DarchetypeCatalog=local </code> using <code>com.pampanet:shiro-guice-resteasy-webapp</code>
 - You can select the archetype from Eclipse IDE from the "New Maven Project" Wizard
 
 Apache Shiro Filters
