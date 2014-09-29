@@ -31,7 +31,7 @@ public class BootstrapRestPackagesModule extends AbstractModule{
 				try {
 					lst = getClasses(pkg.trim());
 				} catch (ClassNotFoundException | IOException e) {
-					// TODO Auto-generated catch block
+					log.error("{}, {}", e.getClass().getName() ,e.getMessage());
 					e.printStackTrace();
 				}
 				for (Class c: lst){
